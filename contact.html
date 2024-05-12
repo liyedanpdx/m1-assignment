@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lindell Animal Adoption Contact Page</title>
+</head>
+<body>
+    <!-- Container -->
+    <div id="container">
+        <!-- Header -->
+        <header>Contact US</header>
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Main Content -->
+        <main>
+            <h1>Animal Adoption Request</h1>
+            <p>We will approach you when we finished evaluating your info/request and give you the further instruction for petting your love one.</p>
+            <img src="images/contactus.png" alt="Central Park Image" width="500">
+            
+            <!-- Form -->
+            <form action="/signup" method="post">
+                <fieldset>
+                    <legend>Adoption Info</legend>
+                    
+                    <br><label><strong>Contact Info</strong></label><br>
+                    <label>Enter your full name:</label><br>
+                    <input type="text" name="name"><br>
+                    <label>Enter your email:</label><br>
+                    <input type="email" name="email"><br>
+                    <label>Enter your phone:</label><br>
+                    <input type="tel" name="phone"><br>
+                    <label>Enter your love to pet animal id number:</label><br>
+                    <input type="number" name="id_number"><br>
+
+                    <label>Select your gender:</label><br>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+
+                    <br>
+                    <label>How should we contact you?</label><br>
+                    <select>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                    </select>
+                    
+                    <br><br><label><strong>Status Inquery</strong></label><br>
+                    <label>Where do you live in?</label><br>
+                    <input type="radio" name="living_place" value="house">House 
+                    <input type="radio" name="living_place" value="apartment">Apartment
+
+                    <br><label>Do you have a yard or outdoor space?</label><br>
+                    <input type="radio" name="outdoor" value="yes">Yes 
+                    <input type="radio" name="outdoor" value="no">No
+
+                    <br><label>How many hours per day will the animal be left alone?</label><br>
+                    <input type="radio" name="alone_hour" value="0-6">0-6
+                    <input type="radio" name="alone_hour" value="6-12">6-12
+                    <input type="radio" name="alone_hour" value="12-18 ">12-18 
+                    <input type="radio" name="alone_hour" value="18-24">18-24
+
+                    <br><label>Do you have children or other pets in the household?</label><br>
+                    <input type="radio" name="other_pet_children" value="yes">Yes 
+                    <input type="radio" name="other_pet_children" value="no">No
+
+                    <br>
+                    <label>Can you provide references from a veterinarian or previous pet owner?</label><br>
+                    <textarea rows="5" cols="30"></textarea>
+                    <br>
+                    <label>Is there anything else you'd like us to know about you or your living situation?</label><br>
+                    <textarea rows="5" cols="30"></textarea>
+                    <br>
+                    <label>Do you have any questions or concerns about the adoption process?</label><br>
+                    <textarea rows="5" cols="30"></textarea>
+                    <br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </main>
+        <!-- Footer -->
+        <br><br>
+        <footer>
+            Copyright &copy; 2024 Lindell Animal Adoption, All rights reserved.<br>
+            Diclaimer: the content is no way or by any meaning for commercial using. 
+        </footer>
+    </div>
+</body>
+</html>
