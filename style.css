@@ -1,8 +1,8 @@
 /* style header area */
 header {
-    background: url("images/Dog-Resting-On-Orange-Leaves.jpg") 0px -200px;/* shortcut */
+    background: url("images/Dog-Resting-On-Orange-Leaves.jpg") 0px -100px;/* shortcut */
     /* background-image: url("images/central_park.jpg"); */
-    background-size: 2000px; /* cannot shortcut */
+    background-size: 1800px; /* cannot shortcut */
     /* background-position: 0px -200px; */
     /* background-repeat: no-repeat; */
     padding-top: 100px;
@@ -102,5 +102,27 @@ footer span:nth-child(4) {
     font-style: italic;
 } 
 
-
-
+/*Image*/
+main{
+    position: relative;
+}
+img[src="images/home_dog.webp"]{
+    z-index: 1;
+    position: relative;
+    left: 150px; 
+    transform: rotate(-10deg);
+}
+img[src="images/What to Look For When Adopting a Rescue Dog.png"]{
+    z-index: 2;
+    position: relative;
+}
+img[src="images/puppers-scaled-300x225.jpeg"]{
+    z-index: 3;
+    position: relative;
+    left: -50px; 
+    transform: rotate(20deg);
+}
+/*Paragraph*/
+p {
+    text-indent: 2em;
+}
