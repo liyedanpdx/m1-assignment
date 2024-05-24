@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lindell Animal Adoption About Page</title>
+    <link rel="stylesheet" href="style.css"> <!--empty tag-->
+</head>
+<body>
+    <!-- Container -->
+    <div id="container">
+        <!-- Header -->
+        <header>Animal Gallery</header>
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Main Content -->
+        <main>
+            <h1>Animal Galley</h1>
+            <p>We are display the animal photos, below are our cute family members!</p>
+
+            <ul id="gallery">
+                <!-- <li id="photo">
+                    <img src="images/winterland1.jpg" alt="">
+                </li>
+                <li id="photo">
+                    <img src="images/winterland2.jpg" alt="">
+                </li>
+                <li id="photo">
+                    <img src="images/winterland3.jpg" alt="">
+                </li>
+                <li id="photo">
+                    <img src="images/winterland4.jpg" alt="">
+                </li>
+                <li id="photo">
+                    <img src="images/winterland5.jpg" alt="">
+                </li>
+                <li id="photo">
+                    <img src="images/winterland6.jpg" alt="">
+                </li> -->
+            </ul>
+        </main>
+        <!-- Footer -->
+        <br><br>
+        <footer>
+            <span>Copyright &copy; 2024 Lindell Animal Adoption, All rights reserved.</span><br>
+            <strong>Diclaimer: </strong>
+            <span>the content is in no way intended for commercial use or any other commercial purposes.</span>
+        </footer>
+    </div>
+
+    <!-- Gallery Script -->
+    <script>
+        var photos = [];
+        var petName = [
+            "Bella",
+            "Max",
+            "Charlie",
+            "Lucy",
+            "Rocky",
+            "Luna",
+            "Milo",
+            "Nala",
+            "Simba",
+            "Gizmo",
+            "Peanut",
+            "Whiskers"
+        ];
+        var description_text = [
+            // Dogs
+            "Loyal and loving, Bella enjoys playful walks daily.",
+            "Energetic and curious, Max loves chasing tennis balls.",
+            "Gentle giant, Charlie adores cuddles and belly rubs.",
+            "Sweet and friendly, Lucy brightens everyone's day.",
+            "Brave and protective, Rocky guards his family fiercely.",
+            // Cats
+            "Mysterious and graceful, Luna loves napping in sunspots.",
+            "Playful and mischievous, Milo enjoys climbing and exploring.",
+            "Elegant and serene, Nala purrs softly when petted.",
+            "Adventurous and bold, Simba loves outdoor escapades.",
+            // Hamsters
+            "Tiny and quick, Gizmo enjoys running on his wheel.",
+            "Adorable and fluffy, Peanut loves hoarding tasty treats.",
+            "Curious and friendly, Whiskers explores every corner curiously."
+        ];
+        var names = [];
+        var descriptions = [];
+        var fileNames = [];
+        var imageList = [];
+        var image;
+        var openList = '<li id="photo">';
+        var closeList = '</li>'
+
+        //create for loop to create the 6 images
+        for (var i=0; i<12; i++){
+            //creat file name and add to array
+            fileNames.push("animal_gallery"+(i+1));
+            photos.push('<img src="images/' + fileNames[i] + '.jpg">');
+            console.log(name);
+            names.push('<div class="image-description">'+ petName[i] +'</div>')
+            descriptions.push('<div class="image-caption">'+ description_text[i] +'</div>')
+            image = openList + photos[i] + names[i] + descriptions[i] + closeList;
+            imageList.push(image);
+        }
+
+        //display our images
+        document.getElementById("gallery").innerHTML=imageList.join(" ");
+        console.log(fileNames);
+
+    </script>
+</body>
+</html>

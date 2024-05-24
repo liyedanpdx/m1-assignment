@@ -126,3 +126,34 @@ img[src="images/puppers-scaled-300x225.jpeg"]{
 p {
     text-indent: 2em;
 }
+
+/* gallery */
+#gallery li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    margin: 50px 30px;
+}
+#gallery .image-description {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-align: center;
+    white-space: nowrap;
+}
+#gallery li:hover .image-description {
+    display: block;
+}
+#gallery .image-caption{
+    position: absolute;
+    top: 115%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
