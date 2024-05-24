@@ -58,7 +58,7 @@
     <!-- Gallery Script -->
     <script>
         var photos = [];
-        var petName = [
+        var descTexts = [
             "Bella",
             "Max",
             "Charlie",
@@ -72,7 +72,7 @@
             "Peanut",
             "Whiskers"
         ];
-        var description_text = [
+        var captionTexts = [
             // Dogs
             "Loyal and loving, Bella enjoys playful walks daily.",
             "Energetic and curious, Max loves chasing tennis balls.",
@@ -94,18 +94,23 @@
         var fileNames = [];
         var imageList = [];
         var image;
-        var openList = '<li id="photo">';
+        var openList = '<li id="photo';
         var closeList = '</li>'
+        var openCaptionTag='<div class="caption">';
+        var closeCaptionTag='</div>';
+        var openDescTag='<div class="description">';
+        var closeDescTag='</div>';
 
         //create for loop to create the 6 images
         for (var i=0; i<12; i++){
             //creat file name and add to array
+            openList_=openList+(i+1)+'">'
             fileNames.push("animal_gallery"+(i+1));
             photos.push('<img src="images/' + fileNames[i] + '.jpg">');
             console.log(name);
-            names.push('<div class="image-description">'+ petName[i] +'</div>')
-            descriptions.push('<div class="image-caption">'+ description_text[i] +'</div>')
-            image = openList + photos[i] + names[i] + descriptions[i] + closeList;
+            names.push('<div class="description">'+ descTexts[i] +'</div>')
+            descriptions.push('<div class="caption">'+ captionTexts[i] +'</div>')
+            image = openList_ + photos[i] + names[i] + descriptions[i] + closeList;
             imageList.push(image);
         }
 

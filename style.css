@@ -134,8 +134,11 @@ p {
     position: relative;
     margin: 50px 30px;
 }
-#gallery .image-description {
-    display: none;
+#gallery li:hover{
+    cursor: pointer;
+}
+#gallery .description {
+    visibility: hidden;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -147,13 +150,14 @@ p {
     text-align: center;
     white-space: nowrap;
 }
-#gallery li:hover .image-description {
-    display: block;
+#gallery li:hover .description {
+    visibility: visible;
 }
-#gallery .image-caption{
+#gallery .caption{
     position: absolute;
     top: 115%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    font-size: medium;
 }
