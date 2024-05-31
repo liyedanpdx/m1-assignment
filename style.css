@@ -167,7 +167,7 @@ p {
 /**/
 #float_description{
     background-color:  rgba(0, 0, 0, 0.7);
-    padding: 100px;
+    padding: 70px;
     position: absolute;
     z-index: 999;
     top: 50%;
@@ -182,4 +182,7 @@ p {
     text-decoration:none;
     color: rgb(235, 235, 121);
     font-weight:bold;
+    display: block;
+    margin-top: 20px;
+    text-align: center;  
 }
