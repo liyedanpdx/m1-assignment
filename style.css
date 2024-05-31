@@ -65,6 +65,7 @@ caption {
 /* Main */
 main {
     margin:75px;
+    position: relative;
 }
 /*for submit form*/
 label {
@@ -161,4 +162,24 @@ p {
     transform: translate(-50%, -50%);
     width: 100%;
     font-size: medium;
+}
+
+/**/
+#float_description{
+    background-color:  rgba(0, 0, 0, 0.7);
+    padding: 100px;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    color: white;
+    display: none;
+}
+
+#float_description a{
+    text-decoration:none;
+    color: rgb(235, 235, 121);
+    font-weight:bold;
 }
