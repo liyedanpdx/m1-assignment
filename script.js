@@ -75,7 +75,6 @@ for (var i=0; i<12; i++){
     openList_=openList+(i+1)+'">'
     fileNames.push("animal_gallery"+(i+1));
     photos.push('<img src="images/' + fileNames[i] + '.jpg">');
-    console.log(name);
     names.push('<div class="description" onclick="showdetails(' + i + ')">'+ descTexts[i] +'</div>')
     descriptions.push('<div class="caption">'+ captionTexts[i] +'</div>')
     image = openList_ + photos[i] + names[i] + descriptions[i] + closeList; 
@@ -86,3 +85,35 @@ for (var i=0; i<12; i++){
 //display our images
 document.getElementById("gallery").innerHTML=imageList.join(" ");
 console.log(fileNames);
+
+$(document).ready(function(){
+    
+    /* Open lightbox on button click */
+    $('#gallery img').click(function(){
+        console.log('123');
+        $('.backdrop').animate({'opacity':'.50'}, 300, 'linear').css('display', 'block');
+        $('.box').fadeIn();
+
+        //Check if lightbox has an image
+        if ($('.box').contents('img')) {
+            $('.box').contents().remove('img'); //If true, clear image
+        }
+
+        //Get text content in attribute
+        var $srcvalue = $(this).attr('src'); //or var altvalue = $(this).attr('alt');
+        
+        //Clone element
+        var img = $('#gallery img[src="' + $srcvalue + '"]').clone();
+        $('.box').append(img); //Insert duplicated element in another element
+    });
+
+    /* Click to close lightbox */
+    $('.close, .backdrop').click(function(){
+        $('.backdrop').animate({'opacity':'0'}, 300, 'linear', function(){
+            $('.backdrop').css('display', 'none');
+        });
+        $('.box').fadeOut();
+    });
+});
+
+
