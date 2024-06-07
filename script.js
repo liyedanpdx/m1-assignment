@@ -90,7 +90,6 @@ $(document).ready(function(){
     
     /* Open lightbox on button click */
     $('#gallery img').click(function(){
-        console.log('123');
         $('.backdrop').animate({'opacity':'.50'}, 300, 'linear').css('display', 'block');
         $('.box').fadeIn();
 
